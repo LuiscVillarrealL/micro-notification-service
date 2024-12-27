@@ -2,10 +2,9 @@ package com.lcvl.microservices.notification;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Import;
 
-@Import(TestcontainersConfiguration.class)
-@SpringBootTest
+
+@SpringBootTest(classes = NotificationServiceApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class NotificationServiceApplicationTests {
 
 	@Test
